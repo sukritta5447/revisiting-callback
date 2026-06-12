@@ -8,7 +8,26 @@
 */
 
 // Start Coding Here
+/*
+-ต้องมี callback 4 อัน postCreated, postLiked, postCommented, postShared
+-HoF ชื่อว่า sendNotification(callback)
+*/
+function postCreated() {
+    return "📝 แจ้งเตือน: โพสต์ของคุณถูกสร้างสำเร็จ!"
+}
+function postLiked() {
+    return "👍 แจ้งเตือน: มีคนมากดไลค์โพสต์ของคุณ!"
+}
+function postCommented() {
+    return "💬 แจ้งเตือน: มีคนมาคอมเมนต์ในโพสต์ของคุณ!"
+}
+function postShared() {
+    return "🔄 แจ้งเตือน: มีคนแชร์โพสต์ของคุณ!"
+}
 
+function sendNotification(callback){
+    return callback();
+}
 
 // เมื่อ function นี้ทำงานจะเห็นผลลัพธ์ดังนี้
 console.log(sendNotification(postCreated));   // 📝 แจ้งเตือน: โพสต์ของคุณถูกสร้างสำเร็จ!

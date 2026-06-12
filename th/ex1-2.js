@@ -7,7 +7,21 @@
 
 let damage = 30;
 // Start Coding Here
+/*
+-ต้องมี callback 2 อัน attack, runAway
+-HoF ชื่อว่า playerAction(callback)
+*/
+function attack(){
+    return `💥 โจมตีสำเร็จ! สร้างความเสียหาย ${damage} แต้ม`
+}
 
+function runAway(){
+    return "😨 หนีสำเร็จ! รอดตายหวุดหวิด!"
+}
+
+function playerAction(callback){
+    return callback();
+}
 
 // เมื่อ function นี้ทำงานจะเห็นผลลัพธ์ดังนี้
 console.log(playerAction(attack));  // 💥 โจมตีสำเร็จ! สร้างความเสียหาย 30 แต้ม
